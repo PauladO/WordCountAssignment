@@ -1,6 +1,6 @@
-import { WordFrequencyAnalyzer } from "../src/WordFrequencyAnalyzer";
-import { testText1, testText2, testText3 } from "./testText";
-import { WordFrequency } from "../src/WordFrequency";
+import { WordFrequencyAnalyzer } from '../src/WordFrequencyAnalyzer';
+import { testText1, testText2, testText3 } from './testText';
+import { WordFrequency } from '../src/WordFrequency';
 
 describe('WordFrequencyAnalyzer', () => {
   const wordFrequencyAnalyzer = new WordFrequencyAnalyzer();
@@ -29,26 +29,26 @@ describe('WordFrequencyAnalyzer', () => {
     it('returns an array of WordFrequency objects for the n most frequent words in testText1', () => {
       let wordFrequencies: WordFrequency[] = wordFrequencyAnalyzer.calculateMostFrequentNWords(testText1, 3);
       
-      expect(wordFrequencies[0].getWord()).toBe("you");
+      expect(wordFrequencies[0].getWord()).toBe('you');
       expect(wordFrequencies[0].getFrequency()).toBe(42);
 
-      expect(wordFrequencies[1].getWord()).toBe("i");
+      expect(wordFrequencies[1].getWord()).toBe('i');
       expect(wordFrequencies[1].getFrequency()).toBe(33);
 
-      expect(wordFrequencies[2].getWord()).toBe("the");
+      expect(wordFrequencies[2].getWord()).toBe('the');
       expect(wordFrequencies[2].getFrequency()).toBe(29);
     });
 
     it('returns an array of WordFrequency objects for the n most frequent words in testText3', () => {
       let wordFrequencies: WordFrequency[] = wordFrequencyAnalyzer.calculateMostFrequentNWords(testText3, 3);
       
-      expect(wordFrequencies[0].getWord()).toBe("word");
+      expect(wordFrequencies[0].getWord()).toBe('word');
       expect(wordFrequencies[0].getFrequency()).toBe(3);
 
-      expect(wordFrequencies[1].getWord()).toBe("text");
+      expect(wordFrequencies[1].getWord()).toBe('text');
       expect(wordFrequencies[1].getFrequency()).toBe(2);
 
-      expect(wordFrequencies[2].getWord()).toBe("test");
+      expect(wordFrequencies[2].getWord()).toBe('test');
       expect(wordFrequencies[2].getFrequency()).toBe(1);
     });
 
@@ -72,11 +72,11 @@ describe('WordFrequencyAnalyzer', () => {
     it('throws error if no string is provided', () => {
 
       try {
-        wordFrequencyAnalyzer.calculateHighestFrequency("");
+        wordFrequencyAnalyzer.calculateHighestFrequency('');
         // Fail test if above expression doesn't throw anything.
         expect(true).toBe(false);
       } catch (e) {
-          expect(e.message).toBe("String cannot be empty");
+          expect(e.message).toBe('String cannot be empty');
       }
     });
   });

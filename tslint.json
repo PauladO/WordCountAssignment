@@ -48,7 +48,7 @@
 		"no-use-before-declare": true,
 		"no-var-keyword": true,
 		"no-var-requires": false,
-		"quotemark": [false, "single"],
+		"quotemark": [true, "single"],
 		"semicolon": true,
 		"triple-equals": [true, "allow-null-check"],
 		"use-strict": [true,

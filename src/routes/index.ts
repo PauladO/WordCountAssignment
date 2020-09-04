@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import router from './routes';
+import wordFrequencyRouter from './routes';
 
 const routes = Router();
 
-routes.use('/api', router);
+routes.use('/api', wordFrequencyRouter);
 
 export default routes;
