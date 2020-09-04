@@ -1,10 +1,12 @@
 export class WordFrequency {
-    getWord(): string {
-        return "";
+
+    constructor(private word: string, private frequency: number) { }
+
+    public getWord(): string {
+        return this.word;
     }
 
-    getFrequency(): number {
-        return 0;
+    public getFrequency(): number {
+        return this.frequency;
     }
-
 }

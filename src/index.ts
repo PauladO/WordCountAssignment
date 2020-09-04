@@ -1,7 +1,12 @@
-const world = '🗺️';
+import express from 'express';
+import routes from './routes';
 
-export function hello(word: string = world): void {
-  console.log(`Hello ${world}! `);
-}
+const port = 3000;
+const app = express();
 
-hello(world);
+app.use(express.json());
+app.use(routes);
+
+app.listen(port, () => {
+  console.log('Server started');
+});
